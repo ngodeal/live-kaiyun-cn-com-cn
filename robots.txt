@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ngodeal.github.io/live-kaiyun-cn-com-cn/sitemap.xml

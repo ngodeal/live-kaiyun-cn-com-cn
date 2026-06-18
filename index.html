@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开云 · 简明指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fafafa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #1e1e1e;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 780px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 32px;
+            padding: 2.8rem 2.2rem;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02), 0 8px 24px rgba(0, 0, 0, 0.04);
+            transition: box-shadow 0.2s ease;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+            .page {
+                padding: 2rem 1.25rem;
+                border-radius: 24px;
+            }
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.2rem;
+            color: #111;
+        }
+
+        .subhead {
+            font-size: 1.1rem;
+            color: #5f5f5f;
+            border-left: 4px solid #6a8caf;
+            padding-left: 1rem;
+            margin: 0.75rem 0 2rem 0;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 2.2rem 0 1rem 0;
+            color: #222;
+            letter-spacing: -0.01em;
+            border-bottom: 1px solid #eaeef2;
+            padding-bottom: 0.4rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 1.6rem 0 0.5rem 0;
+            color: #2c3e4f;
+        }
+
+        p {
+            margin: 0.9rem 0;
+        }
+
+        a {
+            color: #346a9e;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(52, 106, 158, 0.25);
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            border-bottom-color: #346a9e;
+            color: #1d4a72;
+        }
+
+        ul {
+            margin: 0.8rem 0 0.8rem 1.8rem;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 1.4rem;
+            margin-bottom: 0.45rem;
+        }
+
+        ul li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #6a8caf;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.4rem 0;
+        }
+
+        .highlight-card {
+            background: #f5f8fb;
+            border-radius: 18px;
+            padding: 1.2rem 1rem;
+            transition: background 0.2s;
+        }
+
+        .highlight-card strong {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+            color: #1e3346;
+        }
+
+        .highlight-card span {
+            font-size: 0.95rem;
+            color: #3e4f5e;
+        }
+
+        @media (max-width: 520px) {
+            .highlight-grid {
+                grid-template-columns: 1fr;
+                gap: 0.7rem;
+            }
+            h1 {
+                font-size: 1.9rem;
+            }
+        }
+
+        .note-box {
+            background: #f0f4f9;
+            border-radius: 18px;
+            padding: 1.2rem 1.4rem;
+            margin: 1.6rem 0;
+            border-left: 5px solid #6a8caf;
+        }
+
+        .note-box p {
+            margin: 0.2rem 0;
+        }
+
+        .faq-item {
+            margin: 1rem 0;
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            color: #1d2e3d;
+        }
+
+        .faq-item .a {
+            margin-top: 0.1rem;
+            color: #3f4f5e;
+        }
+
+        .footer-note {
+            margin-top: 2.2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e5e9ed;
+            font-size: 0.9rem;
+            color: #6b7b88;
+        }
+
+        .btn-ghost {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #d0d9e2;
+            border-radius: 60px;
+            padding: 0.35rem 1.2rem;
+            font-size: 0.9rem;
+            color: #346a9e;
+            transition: background 0.2s, border-color 0.2s;
+            margin: 0.2rem 0;
+        }
+
+        .btn-ghost:hover {
+            background: #eef3f9;
+            border-color: #a2b9ce;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2e7ed;
+            margin: 1.8rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <h1>开云 · 简明指南</h1>
+    <div class="subhead">从访问前提与实用亮点出发，梳理一份平实的说明页</div>
+
+    <p>
+        无论你是初次了解还是需要一份清晰的参考，下面内容围绕 <a href="https://www.live-kaiyun-cn.com.cn">开云</a>
+        整理了几块核心信息：它的主要特点、常见使用场景，以及一些值得留意的访问思路。
+        这份说明不夸大、不诱导，只把值得知道的列清楚。
+    </p>
+
+    <h2>▎平台摘要</h2>
+    <p>
+        开云是一个面向特定内容聚合与信息互动的线上站点，提供相对集中的功能模块和浏览体验。
+        从布局到交互，整体偏向清晰、直接，适合需要快速定位信息或进行轻量操作的日常使用。
+    </p>
+
+    <div class="highlight-grid">
+        <div class="highlight-card">
+            <strong>信息整合</strong>
+            <span>页面结构较简洁，主要功能入口集中，减少冗余跳转。</span>
+        </div>
+        <div class="highlight-card">
+            <strong>轻交互</strong>
+            <span>基础操作响应流畅，没有过度复杂的层级，适合快速浏览。</span>
+        </div>
+        <div class="highlight-card">
+            <strong>多端适配</strong>
+            <span>在常见屏幕尺寸下都能保持基本可读与可用，移动端表现稳定。</span>
+        </div>
+        <div class="highlight-card">
+            <strong>内容导向</strong>
+            <span>界面设计优先服务于内容呈现，而非装饰或动画。</span>
+        </div>
+    </div>
+
+    <h2>▎使用建议</h2>
+    <p>
+        如果你是第一次使用，可以从首页的主要导航区域开始，逐步熟悉各个板块的定位。
+        开云的部分功能需要稳定的网络环境，建议在常规带宽下操作以获得更一致的体验。
+        另外，根据自己实际需求选择模块，不必一次性浏览所有内容。
+    </p>
+
+    <p>
+        日常使用中，可以收藏 <a href="https://www.live-kaiyun-cn.com.cn">开云</a> 作为固定入口，
+        但记得定期留意站点更新或调整，部分页面路径可能会有优化变动。
+    </p>
+
+    <h3>▎常见场景</h3>
+    <ul>
+        <li>快速查阅信息聚合页，节省逐一搜索的时间</li>
+        <li>在移动端进行轻量操作，界面适配相对友好</li>
+        <li>对比不同板块内容时，较少受到弹窗或强干扰</li>
+        <li>作为日常信息获取的补充渠道之一</li>
+    </ul>
+
+    <h2>▎访问提醒</h2>
+    <div class="note-box">
+        <p><strong>保持理性使用：</strong>任何线上平台都应作为工具，不宜过度依赖。</p>
+        <p><strong>注意信息时效：</strong>页面内容可能随时间更新，重要判断请以最新状态为准。</p>
+        <p><strong>环境差异：</strong>部分功能可能因浏览器、网络或设备差异而表现不同，这是正常情况。</p>
+    </div>
+
+    <h2>▎常见问题摘要</h2>
+    <div class="faq-item">
+        <div class="q">问：开云必须注册才能浏览吗？</div>
+        <div class="a">大部分内容可以直接访问，部分板块可能需要简单注册，具体以实际界面提示为准。</div>
+    </div>
+    <div class="faq-item">
+        <div class="q">问：移动端和桌面端体验差别大吗？</div>
+        <div class="a">核心功能一致，移动端做了布局适配，操作区域更大，但复杂功能建议在大屏下使用更顺手。</div>
+    </div>
+    <div class="faq-item">
+        <div class="q">问：页面加载偏慢怎么办？</div>
+        <div class="a">先检查本地网络连接，也可以尝试更换浏览器或清理缓存。部分资源加载受地区影响，属于外部因素。</div>
+    </div>
+
+    <hr />
+
+    <p style="font-size: 0.95rem;">
+        以上就是关于开云的一份简明整理。如果你需要进一步了解具体功能或布局，
+        可以直接访问 <a href="https://www.live-kaiyun-cn.com.cn">开云</a> 查看最新页面。
+        保持清晰预期，合理使用，会比盲目摸索更有效率。
+    </p>
+
+    <div class="footer-note">
+        <span class="btn-ghost">信息页 · 仅供说明参考</span>
+        <span style="margin-left: 0.8rem; opacity: 0.6;">非官方 / 非推广</span>
+    </div>
+</div>
+</body>
+</html>
